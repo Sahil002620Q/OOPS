@@ -58,7 +58,7 @@ void multi_matrix(int matrix_1[3][3],int matrix_2[3][3])
     cout << endl ;
 }
 
-int main () 
+int main() 
 {
     matrix m1,m2;
 
