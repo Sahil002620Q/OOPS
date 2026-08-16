@@ -1,6 +1,5 @@
 #ifndef LOGGER
-#define LOGGER
-//or use pragma once
+#define LOGGER  //or use pragma once but then you have to import  iostream too
 
 class FileLogger 
 {
