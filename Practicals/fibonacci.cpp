@@ -33,7 +33,7 @@ class fibo
                 return;
             }
 
-            cout << 0 << endl << 1 << endl ;
+            cout << 0 << ' ' << 1 << ' ' ;
             for(int i = 0; i < n - 2  ; i++)
             {
                 int fabo = prev1 + prev2;
