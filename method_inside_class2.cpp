@@ -13,7 +13,6 @@ class min_d
         int y2;
 
     public:
-
         min_d() = default; //else sing mind will try to call mind with 4 perm 
 
         min_d(int x1,int x2,int y1,int y2)  //get all pt perm give direct sol print
