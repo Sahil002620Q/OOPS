@@ -14,5 +14,7 @@ void Myclass::Age(int age)
     
 int main() {
     Myclass obj;
-    obj.Age(19);
+    int age;
+    cout << "Enter your age : " ; cin >> age ;
+    obj.Age(age);
 }
