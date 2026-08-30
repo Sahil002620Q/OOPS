@@ -1,17 +1,19 @@
 #include <iostream>
+#define ROW 4
+#define COL 4
 using namespace std;
 
 class matrix
 {
     public:
-        void get_matrix(int matrix1[3][3])
+        void get_matrix(int matrix1[ROW][COL])
         {
             int m1_row = 1;
-            for(int i = 0 ; i < 3 ; i ++ )
+            for(int i = 0 ; i < ROW ; i ++ )
             {
                 cout <<"enter elements for row " << m1_row << endl ; 
                 m1_row++;
-                for(int j = 0 ; j < 3 ; j ++ )
+                for(int j = 0 ; j < COL ; j ++ )
                 {
                     cin >> matrix1[i][j] ;  
                 } 
@@ -20,11 +22,11 @@ class matrix
         }   
 };
 
-void add_matrix(int matrix_1[3][3],int matrix_2[3][3])
+void add_matrix(int matrix_1[ROW][COL],int matrix_2[ROW][COL])
 {
-    for(int i = 0 ; i < 3 ; i ++ )
+    for(int i = 0 ; i < ROW ; i ++ )
     {
-        for(int j = 0 ; j < 3 ; j ++ )
+        for(int j = 0 ; j < COL ; j ++ )
         {
             cout << matrix_1[i][j] + matrix_2[i][j] << "  ";
         } 
@@ -33,11 +35,11 @@ void add_matrix(int matrix_1[3][3],int matrix_2[3][3])
     cout << endl ;
 }
 
-void sub_matrix(int matrix_1[3][3],int matrix_2[3][3])
+void sub_matrix(int matrix_1[ROW][COL],int matrix_2[ROW][COL])
 {
-    for(int i = 0 ; i < 3 ; i ++ )
+    for(int i = 0 ; i < ROW ; i ++ )
     {
-        for(int j = 0 ; j < 3 ; j ++ )
+        for(int j = 0 ; j < COL ; j ++ )
         {
             cout << matrix_1[i][j] - matrix_2[i][j] << "  ";
         } 
@@ -46,11 +48,11 @@ void sub_matrix(int matrix_1[3][3],int matrix_2[3][3])
     cout << endl ;
 }
 
-void multi_matrix(int matrix_1[3][3],int matrix_2[3][3])
+void multi_matrix(int matrix_1[ROW][COL],int matrix_2[ROW][COL])
 {
-    for(int i = 0 ; i < 3 ; i ++ )
+    for(int i = 0 ; i < ROW ; i ++ )
     {
-        for(int j = 0 ; j < 3 ; j ++ )
+        for(int j = 0 ; j < COL ; j ++ )
         {
             cout << matrix_1[i][j] * matrix_2[i][j] << "  ";
         } 
@@ -63,11 +65,11 @@ int main()
 {
     matrix m1,m2;
 
-    int matrix_1[3][3];
+    int matrix_1[ROW][COL];
     cout << "Enter elements for first matrix " << endl ;
     m1.get_matrix(matrix_1);
 
-    int matrix_2[3][3];
+    int matrix_2[ROW][COL];
     cout << "Enter elements for second matrix " << endl ;
     m1.get_matrix(matrix_2);
 
