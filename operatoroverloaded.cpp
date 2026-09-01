@@ -8,10 +8,10 @@ class recti
     int breadth;
 
     public:
-    recti(int l,int b)
+    recti(int length,int breadth)
     {
-        length = l;
-        breadth = b;
+        this->length = length;
+        this->breadth = breadth;
     }
     recti operator+(recti obj)
     {
