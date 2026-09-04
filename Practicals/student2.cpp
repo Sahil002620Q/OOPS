@@ -16,7 +16,7 @@ class Class
         void display();
         void setdata();
         void display(int no_student,vector<Class>& obj);
-        void Class::stats();
+        void stats();
 
         // void display(int no_student);
         // void display(vector<int> data);
@@ -149,14 +149,14 @@ cout << "\n" ;
 cout << "Exiting program...\n\n\n\n\n\n\n\n\n\n\n" ;
 }
     
-void Class::stats()
+void stats()
 {
 cout << "========================================\n" ;
 cout << "          CLASS STATISTICS\n" ;
 cout << "========================================\n" ;
 cout << "\n" ;
 cout << "Total Students     : 20\n" ;
-cout << "Average Marks      : " ; cout << Class::avg(aiml); << "\n" ;
+// cout << "Average Marks      : " ; cout << Class::avg(aiml); << "\n" ;
 cout << "Highest Marks      : 96\n" ;
 cout << "Lowest Marks       : 42\n" ;
 cout << "Average Attendance : 84.6%\n" ;
@@ -171,6 +171,42 @@ cout << "[2] Back\n" ;
 cout << "\n" ;
 cout << "Enter choice :\n" ;
 }
+
+void updateData()
+{
+    cout << "========================================\n" ;
+    cout << "          UPDATE STUDENT\n" ;
+    cout << "========================================\n" ;
+    cout << "\n" ;
+    cout << "Enter Roll Number: 103\n" ;
+    cout << "\n" ;
+    cout << "Student Found!\n" ;
+    cout << "\n" ;
+    cout << "[1] Update Name\n" ;
+    cout << "[2] Update Roll Number\n" ;
+    cout << "[3] Update Marks\n" ;
+    cout << "[4] Update Attendance\n" ;
+    cout << "[5] Update All Details\n" ;
+    cout << "[6] Back\n" ;
+    cout << "\n" ;
+    cout << "Enter choice :\n" ;
+}
+
+void search()
+{
+    cout << "========================================\n" ;
+    cout << "          SEARCH STUDENT\n" ;
+    cout << "========================================\n" ;
+    cout << "\n" ;
+    cout << "Search By:\n" ;
+    cout << "\n" ;
+    cout << "[1] Roll Number\n" ;
+    cout << "[2] Name\n" ;
+    cout << "[3] Back\n" ;
+    cout << "\n" ;
+    cout << "Enter choice :\n" ;
+}
+
 int main()
 {
    vector<Class> aiml(20);
@@ -206,13 +242,11 @@ int main()
             }
             else if(choice == 4)//
             {
-                system("cls");
-                display(no_studs,aiml);
+                search();
             }
             else if(choice == 5)//
             {
-                system("cls");
-                display(no_studs,aiml);
+                updateData();
             }
             else if(choice == 6) //
             {
