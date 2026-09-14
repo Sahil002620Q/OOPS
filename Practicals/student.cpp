@@ -89,7 +89,7 @@ int main()
 {
     Class AIML_C;
 
-    vector<int> idk = AIML_C.setdata(3,"aiml");
+    AIML_C.setdata(3,"aiml");
     // AIML_C.display(3);
 
     menu();
@@ -98,7 +98,6 @@ int main()
     string classname;
     if(choice == 1)
     {
-        
         cout << "Enter class name : " ; cin >> classname;
     }
     else if(choice == 1)

@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include "../.lib/colors.h"
 using namespace std;
 class Class
 {
@@ -55,7 +56,7 @@ void menu()
     // cout << "1. Enter Students data " << endl ;
     // cout << "1. Display Students Data " << endl ;
     // cout << "1. Delete data " << endl ;
-cout << "\n";
+cout << "\n" << GREEN;
 cout << "========================================\n";
 cout << "          AIML STUDENT SYSTEM\n";
 cout << "========================================\n";
