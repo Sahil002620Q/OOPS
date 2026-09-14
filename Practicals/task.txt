@@ -1,0 +1,19 @@
+wap using cin  --done maybe
+wap to enter and display sum of 2 matrix --done
+wap to print fibonacci series using function --done
+wap using string class with function [length, add,compare] --done almost
+wap to convert fahrenhit to centigrade using function --done
+wap to enter and display marks of 10 students in a subject using array
+wap using pointer 
+wap to find greatest of two numbers using implicitly inline function --done
+
+
+catagory type idk
+Task 5: Write a program that uses a class where the member functions are defined inside a
+class.
+Task 6: Write a program that uses a class where the member functions are defined outside
+a class.
+Task 7: Write a program to demonstrate the use of static data members.
+Task 8: Write a program to demonstrate the use of const data members.
+Task 9: Write a program to demonstrate the use of zero argument and parameterized 
+constructors. A group
