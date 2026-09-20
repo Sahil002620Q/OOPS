@@ -1,5 +1,5 @@
 #include <iostream>
-#include "../mylib.h"
+#include "../.lib/mylib.h" //needfix
 using namespace std;
 
 class temperature
@@ -9,13 +9,15 @@ class temperature
         float celcius;
     
     public:
-        float get_c(){
-            cout << "Enter temperature in Fahrenheit : " ;
+        float get_C()
+        {
+            cout << "90\xC2\xB0\nEnter temperature in Fahrenheit : " ;
             cin >> fahrenheit ; 
             return fahrenheit ;
         }
 
-        float get_F(){
+        float get_F()
+        {
             cout << "Enter temperature in celcius : " ;
             cin >> celcius ;
             return celcius ;
@@ -35,19 +37,25 @@ class temperature
 
 };
 
-int main (){
-
+int main ()
+{
+    cout << "\033[2J\033[1;1H";
     temperature t1;
-    float x = t1.get_F();
-    cout << t1.F_to_C(x);
+    // cout << string(45,'=') << endl ;
+    // float x = t1.get_F();
+    // cout << t1.F_to_C(x);
+    // cout << string(45,'=') << endl ;
+    
+    float fahrenheit;
+    float celcius;
+    cout << string(45,'=') << endl ;
+    cout << "Enter temperature in Fahrenheit : " ;
+    cin >> fahrenheit ; 
+    cout << "\033[1A";
+    cout << "\033[" << 37 << "C";
+    cout << "\xC2\xB0" << "F" ;
 
-    // float fahrenheit;
-    // float celcius;
-    // cout << string(20,'=') << endl ;
-    // cout << "Enter temperature in Fahrenheit : " ;
-    // cin >> fahrenheit ; cout << "\rC" ;
-
-    // celcius = (fahrenheit - 32)*5/9 ;
-    // cout << '\n' << "Temperature in C : " << celcius << endl ;
-    // cout << string(20,'=') << endl ;
+    celcius = (fahrenheit - 32)*5/9 ;
+    cout << '\n' << "Temperature in 90\xC2\xB0 C : " << celcius << endl ;
+    cout << string(45,'=') << endl ;
 }
