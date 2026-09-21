@@ -1,6 +1,6 @@
 #include <iostream>
-#define ROW 3
-#define COL 3
+#define ROW 5
+#define COL 5
 using namespace std;
 
 class matrix
@@ -65,3 +65,6 @@ int main()
     cout << "Subtraction of Matrix 2 from Matrix 1 :\n" ;
     sub_matrix(matrix_1,matrix_2);
 }
+
+
+

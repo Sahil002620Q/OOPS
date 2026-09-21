@@ -60,12 +60,12 @@ class Solution
 
         ~Solution()
         {
-            cout << string(50,'=') << endl ;
+            cout << endl << string(50,'=') << endl ;
         }
 
         Solution()
         {
-            cout << endl << string(50,'=') << endl ;
+            cout << string(50,'=') << endl ;
         }
 };
 
