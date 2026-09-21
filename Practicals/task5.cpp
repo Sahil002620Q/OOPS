@@ -1,10 +1,10 @@
 #include <iostream>
 #include <vector>
 #include <cmath>
-#include <windows.h>
+#include <cstdlib>
 using namespace std;
 
-class min_d
+class min_distance
 {
     private:
         int x1;
@@ -13,9 +13,9 @@ class min_d
         int y2;
 
     public:
-        min_d() = default; //else sing mind will try to call mind with 4 perm 
+        min_distance() = default; 
 
-        min_d(int x1,int x2,int y1,int y2)  //get all pt perm give direct sol print
+        min_distance(int x1,int x2,int y1,int y2)  
         {    
             this->x2 = x2 ;
             this->y1 = y1 ;
@@ -75,9 +75,9 @@ int main ()
 {
     system("cls");
     cout << string(84,'=') << endl ;
-    min_d s1(3,5,4,7);
+    min_distance s1(3,5,4,7);
 
-    min_d s2;
+    min_distance s2;
     cout << string(84,'=') << endl ;
     float distance = s2.shord();
     cout << string(84,'=') << endl ;
