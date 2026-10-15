@@ -133,7 +133,7 @@ int main () {
     for(int i = 0; i < bombs; i++)
     {
         pair<int,int> bomb_i = rnd_row_col(matrix_size);
-        if(find(bomb.begin(),bomb.end(),bomb_i))
+        // if(find(bomb.begin(),bomb.end(),bomb_i))
         bomb.push_back(bomb_i);
         cout << "Deployed at coordinate : " <<  bomb_i.first << " , " ;    //usable with matrix
         cout <<  bomb_i.second << endl ;
