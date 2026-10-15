@@ -20,7 +20,8 @@ pair<int,int> rnd_row_col()
     return {rnd_row,rnd_col};
 }
 
-int main () {
+int main () 
+{
     system("powershell -Command \"[Console]::OutputEncoding = [System.Text.Encoding]::UTF8\"");
     float bet_amount;
     cout << "Enter bet amount : " ; cin >> bet_amount;
@@ -34,12 +35,24 @@ int main () {
         {" ?"," ?"," ?"," ?"," ?"},  
     };
       
-    pair<int,int> bomb = rnd_row_col();
-    cout << bomb.first << endl ;    //usable with matrix
+    pair<int,int> bomb = rnd_row_col();  //giving two vals to one var
+    pair<int,int> bomb2 = rnd_row_col();
+    pair<int,int> bomb3 = rnd_row_col(); //bug it can generate bomb which is already at that place so it could be fixed
+    
+    cout << bomb.first << endl ;    //usable with matrix (first,second)
     cout << bomb.second << endl ;
 
+    cout << bomb2.first << endl ;    
+    cout << bomb2.second << endl ;
+
+    cout << bomb3.first << endl ;   
+    cout << bomb3.second << endl ;
+
     bool matrix[5][5] = {{0,0,0,0,0},{0,0,0,0,0},{0,0,0,0,0},{0,0,0,0,0},{0,0,0,0,0}};
-    matrix[bomb.first][bomb.second] = 1;   //deployed one bomb
+    
+    matrix[bomb.first][bomb.second] = 1;   // 1 deploys one bomb
+    matrix[bomb2.first][bomb2.second] = 1;   // 1 deploys one bomb
+    matrix[bomb3.first][bomb3.second] = 1;   // 1 deploys one bomb
 
 
     int row , column ;
@@ -61,7 +74,7 @@ int main () {
         cout << endl ;
 
         cout << "enter row " ;  cin >> row ;
-        cout << "enter column " ;  cin >> column ;
+        cout << "enter column " ;  cin >> column ; cout << endl ;
         if (matrix[row][column] == true)
         {
             box[row][column] = "💣";
@@ -101,8 +114,10 @@ int main () {
         cout << "1. Pick another\n2. Quit" ; int choice; cin >> choice;
         if(choice == 2) 
         {
-            cout << "💰 CASH OUT SUCCESSFULLY!\nYou won ₹" << bet_amount << ". 🎉\nThanks for playing! 👋";
-            break;
+            cout  << "🎉You won ₹" << bet_amount << ".\n"
+                  << "💰 CASH OUT SUCCESSFULLY!\n"
+                  << "Thanks for playing! 👋";
+                  break;
         }
 
     }
